@@ -11,7 +11,7 @@ do
     do
       for t in $(seq 1 10)
       do
-        echo "$f.$s.$t" # Prints every version that's checked
+        #echo "$f.$s.$t" # Prints every version that's checked
         if [ $keepRunning == true ]
         then
           # Checks to see if url exists
