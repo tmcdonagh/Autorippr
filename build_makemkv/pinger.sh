@@ -11,7 +11,7 @@ do
     do
       for t in $(seq 1 10)
       do
-        #echo "$f.$s.$t" # Prints every version that's checked
+        echo "$f.$s.$t" # Prints every version that's checked
         if [ $keepRunning == true ]
         then
           # Checks to see if url exists
@@ -28,6 +28,14 @@ do
       done
     done
   done
+  curl -s --head http://www.makemkv.com/download/makemkv-oss-$version.tar.gz | head -n 1 | grep "HTTP/1.[01] [23].." > /dev/null
+  if [ $? == 0 ] 
+  then
+    break
+  elif [ $? == 1 ]
+  then
+    echo "One"
+  fi
 done
 echo "Version: $version"
 
