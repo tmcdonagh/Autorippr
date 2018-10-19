@@ -10,8 +10,6 @@ RUN tar xf /src/makemkv-bin.tar.gz -C /src
 RUN mkdir /src/makemkv-bin/
 RUN mv /src/makemkv-bin-*/* /src/makemkv-bin/
 
-RUN ls /src/
-
 RUN mkdir /src/makemkv-bin/tmp/
 RUN echo 'accepted' > /src/makemkv-bin/tmp/eula_accepted
 RUN ls /src/makemkv-bin/
